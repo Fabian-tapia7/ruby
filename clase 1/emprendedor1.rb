@@ -1,10 +1,7 @@
 p = ARGV[0].to_i
 u = ARGV[1].to_i
 g = ARGV[2].to_i
-ut = (p * u) - g
-if ut > 0
-  utf = ut * 0.65
-  puts "las utilidades son #{utf} dolares"
-else
-  puts "las utilidades son #{ut} dolares"
-end
+utilidad = (p * u) - g
+utilidad_imp = ((p * g) - g) if utilidad > 0
+
+puts "las utilidades son #{utf} dolares"
