@@ -1,12 +1,10 @@
-
-
-result = " "
-inic = "a"
-contador = 0
-n.times do |i| until result == "c"
-  contador +=1
-  result += inic
-  inic = inic.next
+def gen(n)
+  result = " "
+  inic = "a"
+  n.times do |i|
+    result += inic
+    inic = inic.next
+  end
+  return result
 end
-
-puts contador
+puts gen(ARGV[0].to_i)
