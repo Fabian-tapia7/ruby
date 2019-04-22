@@ -10,8 +10,11 @@ def letra_x(n)
         puts " "*((n/2)-1)+"**"
     elsif (i*2==(n+1) && n%2!=0)
           puts " "*((n/2))+"*"
-    elsif (i*2)>(n+2)
+    elsif (i*2)>(n+2) && n.even?
       puts " "*(n-i)+"*"+" "*(espacios_abajo)+"*"
+      espacios_abajo += 2
+    elsif (i*2)>(n+2) && n.even? == false
+      puts " "*(n-i)+"*"+" "*(espacios_abajo-1)+"*"
       espacios_abajo += 2
     end
   end
