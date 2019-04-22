@@ -3,8 +3,9 @@ def to_minutes(seconds)
   minuts = []
   var_aux = 0
   n.times do |i|
-    var_aux = i/60
-    minuts.push
+    minuts.push seconds[i]/60
   end
-  minuts
+  print minuts
 end
+print "\n"
+to_minutes([80, 100,180])

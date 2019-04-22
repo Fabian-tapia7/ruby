@@ -7,3 +7,4 @@ n.times do |i|
   end
 end
 print filtered_array
+print "\n"
