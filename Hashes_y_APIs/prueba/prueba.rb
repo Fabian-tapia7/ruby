@@ -21,14 +21,14 @@ end
 
 
 response_hash = hash_api(
-  "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=2015-6-3&api_key=",
+  "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=",
   'Rv8cfuYdEcpouw5ccEIz0EVhlMgAIIMIlCa1GAh0'
 )
 
-def buid_web_page(data, n)
+def buid_web_page(data)
 
   array_img =[]
-
+  n = data['photos'].count
   n.times do |e|
     array_img.push(data['photos'][e]['img_src'])
   end
@@ -55,4 +55,23 @@ def buid_web_page(data, n)
 end
 
 
-buid_web_page(response_hash,4)
+buid_web_page(response_hash)
+
+
+def photos_count(data,n)
+
+  name_camera =[]
+
+  n.times do |e|
+    name_camera.push(data['photos'][e]['camera']['full_name'])
+  end
+
+
+  total_photos = []
+  n.times do |e|
+    total_photos.push(data['photos'][e]['rover']['total_photos'])
+  end
+
+end
+
+photos_count(response_hash,4)
