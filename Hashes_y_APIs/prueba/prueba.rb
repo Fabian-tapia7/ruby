@@ -20,7 +20,10 @@ def hash_api(link, api_key='DEMO_KEY')
 end
 
 
-response_hash = hash_api("https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=2015-6-3&api_key=",'Rv8cfuYdEcpouw5ccEIz0EVhlMgAIIMIlCa1GAh0')
+response_hash = hash_api(
+  "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=2015-6-3&api_key=",
+  'Rv8cfuYdEcpouw5ccEIz0EVhlMgAIIMIlCa1GAh0'
+)
 
 def buid_web_page(data, n)
 
